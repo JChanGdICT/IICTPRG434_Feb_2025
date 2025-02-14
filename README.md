@@ -1,5 +1,5 @@
 Hello all,
-The weekly tasks will be uploaded here.
+The weekly task solutions will be uploaded here.
 
 Notes Useful sites for flowcharting:
 
