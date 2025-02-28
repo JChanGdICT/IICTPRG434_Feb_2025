@@ -1,1 +1,34 @@
+// Simple Arithmetic Calculator Pseudocode
+
+PRINT "Simple Arithmetic Calculator"
+SET input1 = READ("Enter the first number: ")
+SET input2 = READ("Enter the second number: ")
+SET operator = READ("Enter an operator (+, -, *, /): ")
+
+IF (input1 can be converted to an integer AND input2 can be converted to an integer) {
+    SET num1 = Convert input1 to integer
+    SET num2 = Convert input2 to integer
+
+    IF (operator == "+") {
+        SET result = num1 + num2
+    } ELSE IF (operator == "-") {
+        SET result = num1 - num2
+    } ELSE IF (operator == "*") {
+        SET result = num1 * num2
+    } ELSE IF (operator == "/") {
+        IF (num2 != 0) {
+            SET result = num1 / num2
+        } ELSE {
+            PRINT "Error: Division by zero is not allowed."
+            EXIT
+        }
+    } ELSE {
+        PRINT "Error: Invalid operator. Please enter one of +, -, *, /."
+        EXIT
+    }
+
+    PRINT "The result is: {result}"
+} ELSE {
+    PRINT "Error: Please enter valid integer numbers."
+}
 
