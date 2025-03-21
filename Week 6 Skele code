@@ -1,0 +1,178 @@
+#!/usr/bin/env python3
+# coding: utf-8
+
+"""
+Extended Address Book Program
+
+This script extends the previous simple address book implementation by adding data persistence and input validation.
+The program now supports saving the address book to and loading it from a CSV file. This ensures that entries are
+retained between sessions. Additionally, it includes validation for email addresses and phone numbers to ensure that
+entries are correctly formatted.
+
+Enhancements over the previous version:
+- Data Persistence: Entries are saved to CSV, allowing them to persist between program runs.
+- Input Validation: Email addresses and phone numbers are validated using regular expressions.
+"""
+
+import csv
+import os
+import re
+import sys
+
+# Constants for menu options
+ADD_ENTRY = 1
+REMOVE_ENTRY = 2
+LIST_ENTRIES = 3
+SHOW_ENTRY = 4
+CLEAR_ENTRIES = 5
+EXIT = 6
+
+address_book = []  # List to store address book entries
+
+def num_input(prompt: str) -> int:
+    """
+    Prompt the user for a numeric input.
+
+    * Use a while loop to continuously prompt the user until a valid input is entered
+    * Inside the loop, try to convert the user's input to an integer using int()
+    * If successful, return the integer
+    * If a ValueError occurs (user entered non-numeric input), print an error message
+      and continue the loop to prompt again
+    """
+    pass  # Remove this and add your code
+
+def add_entry(name: str, phone: str, email: str) -> None:
+    """
+    Add a new entry to the address book.
+
+    * Validate the email and phone inputs using the validate_email and validate_phone functions
+    * If validation fails, print an error message and return without adding the entry
+    * Create a dictionary called 'entry' with keys 'name', 'phone', and 'email'
+    * Append the 'entry' dictionary to the address_book list
+    * Print a success message
+    """
+    pass  # Remove this and add your code
+
+def remove_entry(number: int) -> None:
+    """
+    Remove an entry from the address book by its number.
+
+    * Check if the number is valid (greater than or equal to 1 and less than or equal to the length of address_book)
+    * If valid, remove the entry at the specified index (number - 1) using the list's pop() method
+    * Print a success message with the name of the removed entry
+    * If invalid, print an error message
+    """
+    pass  # Remove this and add your code
+
+def list_entries() -> None:
+    """
+    List all entries in the address book.
+
+    * Use the enumerate() function to loop through each entry in the address_book list, starting the index at 1
+    * Print the index and name of each entry
+    """
+    pass  # Remove this and add your code
+
+def show_entry(number: int) -> None:
+    """
+    Show details of a specific entry in the address book.
+
+    * Check if the number is valid (greater than or equal to 1 and less than or equal to the length of address_book)
+    * If valid, access the entry at the specified index (number - 1)
+    * Print the details (name, phone, and email) of the entry
+    * If invalid, print an error message
+    """
+    pass  # Remove this and add your code
+
+def clear_entries() -> None:
+    """
+    Clear all entries in the address book.
+
+    * Use the list's clear() method to empty the address_book list
+    * Print a success message
+    """
+    pass  # Remove this and add your code
+
+def validate_email(email: str) -> bool:
+    """
+    Validate the format of an email address using regular expressions.
+
+    ****************************************************************************
+
+    See https://realpython.com/regex-python/ for a great guide on regexes, and
+    https://regex101.com/ for testing them out.
+
+    ****************************************************************************
+
+    * Define a regular expression pattern for a valid email address
+    * Use the re.match() function to check if the email matches the pattern
+    * Return True if the email is valid, False otherwise
+    """
+    pass  # Remove this and add your code
+
+def validate_phone(phone: str) -> bool:
+    """
+    Validate the format of a phone number using regular expressions. See the
+    above links in the validate_email function for more information on regexes.
+
+    * Define a regular expression pattern for a valid Australian phone number that:
+        - Starts with '0' followed by a digit between 2 and 8
+        - Is followed by exactly 8 digits
+
+    * Use the re.match() function to check if the phone number matches the pattern
+    * Return True if the phone number is valid, False otherwise
+    """
+    pass  # Remove this and add your code
+
+def save_to_csv(filename: str) -> None:
+    """
+    Save the address book entries to a CSV file.
+
+    * Open the specified filename for writing, using the 'with' statement
+    * Create a csv.DictWriter object, passing the file object and the fieldnames
+    * Write the header to the CSV file using the writer's writeheader() method
+    * Iterate over each entry in the address_book list and write it to the CSV file using the writer's writerow() method
+    """
+    pass  # Remove this and add your code
+
+def load_from_csv(filename: str) -> None:
+    """
+    Load address book entries from a CSV file.
+
+    * Check if the file exists using os.path.exists()
+    * If the file exists, open it for reading using the 'with' statement
+    * Create a csv.DictReader object, passing the file object
+    * Clear the existing entries in the address_book list
+    * Iterate over each row in the CSV file and append it to the address_book list
+    """
+    pass  # Remove this and add your code
+
+def show_menu() -> int:
+    """
+    Display the main menu options to the user and get their choice.
+
+    * Print the options for adding, removing, listing, showing, clearing entries, and exiting
+    * Use the constants defined at the beginning of the script for the menu options
+    * Prompt the user for their choice using the num_input function and return the result
+    """
+    pass  # Remove this and add your code
+
+def main() -> None:
+    """
+    Main function to run the extended address book program.
+
+    * Load the address book entries from the CSV file at the start using load_from_csv()
+    * Use an infinite loop to continuously display the menu and prompt the user for a choice
+    * Based on the choice, call the appropriate function or exit the loop
+    * If the user chooses to add an entry, prompt for the name, phone, and email, then call add_entry()
+    * If the user chooses to remove an entry, check if the address book is empty, prompt for the entry number, then call remove_entry()
+    * If the user chooses to list entries, call list_entries()
+    * If the user chooses to show an entry, check if the address book is empty, prompt for the entry number, then call show_entry()
+    * If the user chooses to clear entries, call clear_entries()
+    * If the user chooses to exit, save the address book to the CSV file using save_to_csv(), print a goodbye message, and break the loop (exiting the program)
+    * If the user enters an invalid choice, print an error message
+    """
+    pass  # Remove this and add your code
+
+if __name__ == '__main__':
+    sys.exit(main())
