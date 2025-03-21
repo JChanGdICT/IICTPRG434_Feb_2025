@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+# coding: utf-8
+
+"""
+Python ATM Simulator
+
+This script simulates basic operations of an Automated Teller Machine (ATM). It allows a user to log in using a PIN,
+check their balance, make deposits, and withdraw money. The script demonstrates the use of functions, loops,
+conditionals, and exception handling in Python.
+"""
+
+import getpass  # Import getpass module for hiding PIN input
+
+# Define global variables for account name, balance, and pin
+account_name = "Alan Turing"
+balance = 0.0
+pin = "0000"
+
+def make_deposit(amount: float):
+    """
+    Function to handle deposit transactions.
+    * Access the global balance variable
+    * Add the deposit amount to the balance
+    * Print a message showing the new balance
+
+    Hint: Use the global keyword to modify the balance variable.
+    """
+    pass  # Remove this and add your code
+
+def make_withdrawal(amount: float):
+    """
+    Function to handle withdrawal transactions.
+    * Access the global balance variable
+    * Check if the withdrawal amount is greater than the current balance:
+      * If it is, print an "Insufficient funds" message
+      * Otherwise, subtract the amount from the balance and print the new balance
+
+    Hint: Use an if-else statement to check the balance before making the withdrawal.
+    """
+    pass  # Remove this and add your code
+
+def show_balance():
+    """
+    Function to display the current balance.
+    * Print a message showing the current balance
+
+    Hint: Simply print the balance variable.
+    """
+    pass  # Remove this and add your code
+
+def login() -> bool:
+    """
+    Function to handle user login.
+    * Call the get_pin function to get the user-entered PIN
+    * Compare the entered PIN with the global pin variable:
+      * If they match, print a welcome message and return True
+      * Otherwise, return False
+
+    Hint: Use an if-else statement to compare the PINs.
+    """
+    pass  # Remove this and add your code
+
+def get_pin() -> str:
+    """
+    Function to securely get the user's PIN.
+    * Use a loop to keep asking for the PIN until a valid one is entered
+    * Use the getpass module to hide the PIN input and store it in a variable
+    * Check if the entered PIN is a 4-digit number:
+      * If it is, break the loop and return the PIN
+      * Otherwise, print a message asking for a 4-digit PIN and continue the loop
+
+    Hint: Use a while loop and the isdigit() method to validate the PIN.
+    """
+    pass  # Remove this and add your code
+
+def show_menu() -> int:
+    """
+    Function to display the main menu and get user's choice.
+    * Print the options for checking balance, making a deposit, making a withdrawal, and exiting
+    * Use a loop to get a valid choice from the user
+      * Check if the input is a digit and within the valid range of options
+      * If valid, convert the choice to an integer and break the loop
+      * Otherwise, print a message asking for a valid choice and continue the loop
+    * Return the user's choice as an integer
+
+    Hint: Use a while loop and the input() function to get the user's choice.
+    """
+    pass  # Remove this and add your code
+
+def main():
+    """
+    Main function to run the ATM program.
+    * Print a welcome message
+    * Use a loop to handle the login process
+      * Call the login function
+      * If login is successful, break the loop
+      * Otherwise, print an "Invalid PIN" message and continue the loop
+    * Use another loop to handle the main menu and operations
+      * Call the show_menu function to get the user's choice
+      * Based on the choice, call the appropriate function to handle the operation
+      * If the user chooses to exit, print a goodbye message and break the loop
+
+    Hint: Use a while loop for the login process and another while loop for the main menu.
+    """
+    pass  # Remove this and add your code
+
+# Run the main function if the script is executed directly
+if __name__ == "__main__":
+    main()
